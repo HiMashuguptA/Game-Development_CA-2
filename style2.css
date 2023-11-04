@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body properties with background image*/
+body{
+    background-image: url("5258892.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*  Text Styling */
+.text {
+color: white;
+font-size: 25px;
+font-family: M PLUS 1 Code;
+top: 283px;
+right: 87px;
+position: absolute;
+left: 875px;
+}
+
+/* round white image image */
+#elips{
+width: 43px;
+height: 45px;
+right: 58px;
+top: 35px;
+position: absolute;
+}
+
+/* cross (X) Image placed at right Top */
+#Img-cross{
+position: absolute;
+right: 58px;
+top: 35px;
+}
+#crossimg{
+width: 43px;
+height: 45px;
+cursor: pointer;
+}

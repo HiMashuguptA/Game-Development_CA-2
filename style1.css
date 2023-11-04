@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body Properties */
+body{
+    background-color: black;
+    background-image: url("maze.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* Maze Box Game Text and Welcome Gamers Text Image  */
+
+.textimg{
+    padding-top: 7%;
+}
+.bodytext{
+    padding: 3% 0 0 23%;
+}    
+
+
+/* Level Selection Styling */
+#level{
+    height: 45px;
+    border-radius: 9px;
+    background: white;
+    width: 32%;
+    color: #000;
+    font-family: Libre Franklin;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.level{
+    padding: 3.5% 0 0 35%;
+}
+
+/*level text Decoration  */
+#level-text{
+    background-color: white;
+}
+
+/* hover effect */
+#level-text:hover{
+    background-color:rgb(194, 194, 194);
+}
+#level:hover{
+    background-color:rgb(194, 194, 194);
+}
+
+/* Btn Styling */
+#btn3{
+    background: white;
+    width: 32%;
+    height: 56px;
+    border-radius: 57px;
+    cursor: pointer;
+}
+/* Button hover effect */
+#btn3:hover{
+    background-color: antiquewhite;
+    border: 2px dashed black;
+}
+.btn{
+    padding: 10.5% 0 0 35%;
+}
+
+/* button text Styling */
+
+#btn-text{
+    color: #000;
+    height: 24.512999999999998px;
+    font-family: LED Dot-Matrix;
+    font-size: 176%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* infomation (i) Image  */
+#info{
+    top: 3.2%;
+    position: absolute;
+    right: 7.5%;
+    padding: 0 4% 0 0;
+}
+#i{
+    background-color: white;
+    border-radius: 66px;
+    width: 46px;
+    height: 44px;
+    color: white;
+    cursor: pointer;
+}
+
+/* instruction image styling */
+#instruction{
+    top: 3%;
+    position: absolute;
+    cursor: pointer;
+    right: 0.5%;
+}
+
+/* Mobile Responsive */
+@media(max-width: 400px) {
+    body{
+        width: 100%;
+    }
+
+#i{
+    display: flex;
+    width: 18px;
+    height: 20px;
+}
+#info{
+    top: 1%;
+    position: absolute;
+    right: 13.2%;
+    padding: 0 4.5% 0 0;
+}
+
+#instruction{
+    top: 1%;
+    position: absolute;
+    cursor: pointer;
+    right: -24.5%;
+    
+}
+#intro{
+    width: 40%;
+}
+.textimg{
+    padding-top: 15%;
+    display: flex;
+    justify-content: center;
+}
+#bgimg{
+    width: 72%;
+}
+.bodytext{
+    padding: 3% 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+#bgimg2{
+    width: 36%;
+}
+#level{
+    display: flex;
+    justify-content: center;
+    height: 27px;
+    width: 30%;
+    font-size: 9px;
+}
+.level{
+    padding: 6% 0 0 42%
+}
+#btn3{
+    background: white;
+    width: 34%;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#btn-text {
+    height: 8.513px;
+    font-size: 59%;
+}
+.btn{
+    padding: 27% 2% 2% 41%;
+}
+}
