@@ -6,7 +6,30 @@
     <title>Maze Game</title>
     <link rel="stylesheet" href="style3.css">
 </head>
-<body>
-    <script src="app.js"></script>
+<body onload="createMaze()">
+    <div id="timer" class="timer">0</div>
+    <h1>Rat in a Maze</h1>
+    <select id="levelselect">
+                <option value="1" id="level-text">Select</option>
+                <option value="2" id="level-text">Level 1</option>
+                <option value="3" id="level-text">Level 2</option>
+                <option value="4" id="level-text">Level 3</option>
+                <option value="5" id="level-text">Level 4</option>
+                <!-- <option value="5" id="level-text">L e v e l - 5</option>
+                <option value="6" id="level-text">L e v e l - 6</option>
+                <option value="7" id="level-text">L e v e l - 7</option>
+                <option value="8" id="level-text">L e v e l - 8</option>
+                <option value="9" id="level-text">L e v e l - 9</option>
+                <option value="10" id="level-text">L e v e l - 10</option>
+                <option value="11" id="level-text">L e v e l - 11</option>
+                <option value="12" id="level-text">L e v e l - 12</option> -->
+    </select>
+
+    <div id="maze-container">
+        <img src="rat.png" id="rat" width="50px" height="50px" alt="rat">
+        <img src="food.png" id="food" alt="food" width="50px" height="50px">
+    </div>
+    <script src="app4.js"></script>
 </body>
+
 </html>

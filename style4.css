@@ -67,3 +67,14 @@ body{
 .btn2{
     padding: 120px 0 0 410px;
 }
+#won{
+    position: absolute;
+    padding: 10px 0px 0px 305px;
+    display: none;
+}
+#Lost{
+    position: absolute;
+    padding: 10px 0px 0px 305px;
+    display: none;
+}
+

@@ -28,7 +28,7 @@ body{
 
 
 /* Level Selection Styling */
-#level{
+/* #level{
     height: 45px;
     border-radius: 9px;
     background: white;
@@ -39,15 +39,15 @@ body{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-.level{
+} */
+/* .level{
     padding: 3.5% 0 0 35%;
-}
+} */
 
 /*level text Decoration  */
-#level-text{
+/* #level-text{
     background-color: white;
-}
+} */
 
 /* hover effect */
 #level-text:hover{
@@ -112,9 +112,10 @@ body{
 }
 
 /* Mobile Responsive */
-@media(max-width: 400px) {
+@media(max-width: 500px) {
     body{
-        width: 100%;
+        /* width: 100vw; */
+        /* height: 100vh; */
     }
 
 #i{
@@ -148,12 +149,12 @@ body{
     width: 72%;
 }
 .bodytext{
-    padding: 3% 0 0 0;
+    padding: 10% 0 0 0;
     display: flex;
     justify-content: center;
 }
 #bgimg2{
-    width: 36%;
+    width: 40%;
 }
 #level{
     display: flex;
@@ -177,6 +178,7 @@ body{
     font-size: 59%;
 }
 .btn{
-    padding: 27% 2% 2% 41%;
+    padding: 12% 2% 2% 41%;
 }
 }
+
