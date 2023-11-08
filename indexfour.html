@@ -6,29 +6,24 @@
     <title>MAZE GAME</title>
     <link rel="stylesheet" href="style4.css">
 </head>
+
+
 <body>
-    <div class="conatiner">
-        <!-- Gameover image -->
-        <div class="gameover">
-            <img src="gameover2.png" alt="">
-        </div>
-        <!-- Won image -->
-        <div id="won">
-            <img src="won the match.png" alt="">
-        </div>
-        <!-- Lost Image -->
-        <div id="Lost">
-            <img src="lost game.png" alt="">
-        </div>
-        <!-- score div with score image and result -->
-        <div class="score">
-            <img src="YOUR SCORE _.png" alt=""> <p id="result">0</p>
-        </div>
-        <!-- play again button and exit button -->
-        <div class="play-exit-btn">
-            <button type="text" id="play-btn"><p id="btn-text">PLAY AGAIN</p></button>
-            <button type="text" id="exit-btn"><p id="btn-text">EXIT</p></button>
-        </div>
+    <div class="video">
+        <video autoplay muted loop id="myVideo">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="content">
+    <h1 id="won" data-text="You Have Won 🏆 The Game">You Have Won 🏆 The Game</h1>
+    <h1 id="Lost" data-text="You Have Lost 😿 The Game">You Have Lost 😿 The Game</h1>
+    <h2 id="Score">Your Score: <span id="result"></span></h2>
+    <!-- Use a button to pause/play the video with JavaScript -->
+    <button id="play-btn">PLAY AGAIN</button>
+    <button id="exit-btn">EXIT</button>
     </div>
     <script src="app3.js"></script>
 </body>

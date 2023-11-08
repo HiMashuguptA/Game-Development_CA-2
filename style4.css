@@ -1,48 +1,64 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Body Properties with Background body image */
-body{
+/* body{
     background-image: url("maze\ \(1\).png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color:black;
+} */
+#myVideo {
+    position: fixed;
+    right: 0;
+    /* bottom: 0; */
+    min-width: 100%;
+    min-height: 100%;
 }
 
-/* Game Over Image*/
-.gameover{
-    padding: 40px 0px 0px 370px;
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
 }
+/* Game Over Image*/
+/* .gameover{
+    padding: 40px 0px 0px 370px;
+} */
 
 /* score image */
-.score{
+/* .score{
     display: flex;
     padding-top: 220px;
     justify-content: center;
-}
+} */
 
 /* game Result */
 
-#result{
+/* #result{
     font-size: 100px;
     color: aqua;
-}
+} */
 
 /* Play Again and Exit buitton Styling */
-.play-exit-btn{
+/* .play-exit-btn{
     display: flex;
     justify-content: space-evenly;
     padding-top: 70px;
-}
+} */
 
 /* button  Hover Effect*/
 
 #play-btn:hover,#exit-btn:hover{
-    background-color: antiquewhite;
-    border: 2px dashed black;
+    background-color: rgb(31, 28, 28);
+    border: 2px dashed rgb(255, 250, 250);
 }
 
 /* button text Styling */
@@ -59,10 +75,17 @@ body{
 
 /* play button and exit button styling */
 #play-btn,#exit-btn{
-    background: white;
+    /* background: white;
     width: 178px;
     height: 60px;
     border-radius: 57px;
+    cursor: pointer; */
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
     cursor: pointer;
 }
 .exit-btn{
@@ -70,7 +93,7 @@ body{
 }
 
 /* Won And Lost Image */
-#won{
+/* #won{
     position: absolute;
     padding: 10px 0px 0px 305px;
     display: none;
@@ -79,21 +102,108 @@ body{
     position: absolute;
     padding: 10px 0px 0px 305px;
     display: none;
-}
+} */
+#won{
+    position: relative;
+    font-size: 6rem;
+    color: #222;
+    display: none;
+  
+  }
+  #won::before
+  {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #CAF61C) drop-shadow(0 0 50px #CAF61C);
+    /* display: none; */
+    }
+
+    @keyframes animate {
+      0%,10%,100%{
+        width: 0;
+      }
+      70%,90%{
+        width: 100%;
+      }
+    }
+
+    #Lost{
+        position: relative;
+        font-size: 6rem;
+        color: #222;
+        display: none;
+      
+      }
+      #Lost::before
+      {
+        content: attr(data-text);
+        position: absolute;
+        color: #fff;
+        width: 350px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 4px solid #fff;
+        animation: animate 8s linear infinite;
+        filter: drop-shadow(0 0 20px #CAF61C) drop-shadow(0 0 50px #CAF61C);
+        }
+    
+        @keyframes animate {
+          0%,10%,100%{
+            width: 0;
+          }
+          70%,90%{
+            width: 100%;
+          }
+        }
 
 /* Mobile Responsive */
 @media(max-width: 500px){
-    .gameover{
-        padding: 10px;
+    #myVideo {
+        position: fixed;
+        right: 0;
+        /* bottom: 0; */
+        min-width: auto;
+        min-height: auto;
     }
-    #Lost,#won{
-        width: 100%;
-        height: auto;
+    body{
+        width: 101vw;
+        height: 100vh;
+    }
+    /* .gameover{
         padding: 10px;
-        object-fit: cover;
+    } */
+    #Lost,#won{
+        font-size: 18px;
 
     }
-    .score{
-        margin-right: -85px;
+    #Score{
+        font-size: 1rem;
+    }
+    #play-btn,#exit-btn{
+        width: 105px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    @keyframes animate {
+        0%,10%,100%{
+          width: 0;
+        }
+        70%,90%{
+          width: 90%;
+        }
+      }
+      #video{
+        height: 700px;
+      }
+      #myVideo{
+        position: fixed;
+        max-height: 322px;
+        min-width: 100%;
     }
 }
