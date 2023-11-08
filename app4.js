@@ -1,8 +1,9 @@
+// Background Audio 
 
 let bgmMusic = new Audio("Music.mp3");
     bgmMusic.play()
 
-
+// Creating Levels
 let level1 = [
     [1, 0, 0, 0],
     [0, 0, 0, 0],
@@ -51,22 +52,23 @@ let level5 = [
     [0, 1, 0, 1, 0, 1, 1, 1, 1, 1]
 ]
 
+
 let mazearray = level1;
 let Level = document.getElementById("levelselect");
-// var lvlsele = JSON.parse(localStorage.getItem("lvlvalue"))
 
-
+// Creating Timer
 let timer;
 let timeInSeconds = 0;
-
+// Giving Specific Time to each level
 let levelTimes = {
-    1: 999,
+    1: NaN,
     2: 2,
     3: 3,
     4:5,
     5:6
 };
 
+// Display Time in second and running
 function displayTime(seconds) {
     const timerDisplay = document.getElementById('timer');
     if (timerDisplay) {
@@ -84,7 +86,7 @@ function startTimer() {
         if (timeInSeconds < 0) {
             clearInterval(timer);
             localStorage.setItem("result","loose")
-            window.open("indexfour.html")
+            window.open("indexfour.html","_self")
             
 
             // Implement actions to handle the time's up event
@@ -92,14 +94,14 @@ function startTimer() {
         displayTime(timeInSeconds);
     }, 1000);
 }
+
+// Maze creating and level Selection
+
 let maze = document.getElementById("maze-container");
 let rat = document.getElementById("rat");
 let food = document.getElementById("food");
 Level.addEventListener("change", function () {
     let level = Level.value;
-    // let level = lvlsele
-    // console.log(level);
-    // console.log(level);
     clearInterval(timer);
     if(level==1){
         mazearray = level1; 
@@ -125,6 +127,7 @@ Level.addEventListener("change", function () {
     createMaze();
 })
 
+// Setting Position of rat and food
 function setratposition(x, y) {
     rat.style.top = x + "px";
     rat.style.left = y + "px";
@@ -151,7 +154,7 @@ function createMaze() {
 
 
 
-            // rat = 2 , replace 2 with 0,0 of mazearray ---------------------------------
+            // rat = 2 , replace 2 with 0,0 of mazearray
             if (i == 0 && j == 0) {
                 mazearray[i][j] = 2;
             }
@@ -161,7 +164,6 @@ function createMaze() {
 
     setratposition(0, 0)
     setfoodposition(0, 0)
-    // console.log(mazearray);
 }
 
 
@@ -180,7 +182,7 @@ function getratposition() {
     return position;
 }
 
-
+// Accessing and controling mouse with arrow keys
 
 document.addEventListener("keydown", function (e) {
     let rat = document.getElementById("rat");
@@ -191,11 +193,8 @@ document.addEventListener("keydown", function (e) {
     let foodtop = food.offsetTop;
     let ratposition = getratposition();
     
-    
-    
-    
-    
-    // console.log(ratleft, rattop);
+    //  Providing Condition In arrow keys
+
     if (e.key == "ArrowRight" && ratleft < (mazearray.length - 1) * 50 && mazearray[ratposition[0]][ratposition[1] + 1] == 1) {
         ratleft += 50;
         rat.style.left = ratleft + "px";
@@ -236,7 +235,7 @@ document.addEventListener("keydown", function (e) {
     }
 })
 
-
+// Counting total number of moves and storing it into local storage
 let totalMoves = 0;
 localStorage.setItem("totalmoves",0)
 document.addEventListener("keydown", function (e) {
@@ -244,6 +243,5 @@ document.addEventListener("keydown", function (e) {
         totalMoves++;
         console.log(totalMoves)
         localStorage.setItem("totalmoves",totalMoves)
-        // console.log(localStorage.getItem("totalmoves"));
     }
 });

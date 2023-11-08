@@ -8,7 +8,6 @@
 body{
     background-image: url("maze\ \(1\).png");
     background-repeat: no-repeat;
-    /* background-size: cover; */
     background-size: cover;
     background-color:black;
 }
@@ -33,7 +32,7 @@ body{
 }
 
 /* Play Again and Exit buitton Styling */
-.btn{
+.play-exit-btn{
     display: flex;
     justify-content: space-evenly;
     padding-top: 70px;
@@ -41,7 +40,7 @@ body{
 
 /* button  Hover Effect*/
 
-#btn1:hover,#btn2:hover{
+#play-btn:hover,#exit-btn:hover{
     background-color: antiquewhite;
     border: 2px dashed black;
 }
@@ -57,16 +56,20 @@ body{
     line-height: normal;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-#btn1,#btn2{
+
+/* play button and exit button styling */
+#play-btn,#exit-btn{
     background: white;
     width: 178px;
     height: 60px;
     border-radius: 57px;
     cursor: pointer;
 }
-.btn2{
+.exit-btn{
     padding: 120px 0 0 410px;
 }
+
+/* Won And Lost Image */
 #won{
     position: absolute;
     padding: 10px 0px 0px 305px;
@@ -78,3 +81,19 @@ body{
     display: none;
 }
 
+/* Mobile Responsive */
+@media(max-width: 500px){
+    .gameover{
+        padding: 10px;
+    }
+    #Lost,#won{
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        object-fit: cover;
+
+    }
+    .score{
+        margin-right: -85px;
+    }
+}

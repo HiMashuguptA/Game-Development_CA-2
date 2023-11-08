@@ -42,3 +42,22 @@ width: 43px;
 height: 45px;
 cursor: pointer;
 }
+
+
+/* Mobile responsive */
+@media(max-width: 500px) {
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    .text {
+        color: black;
+        background-color: white ;
+        font-size: 20px;
+        flex-direction: column;
+        margin-left: -837px;
+        width: 313px;
+    }
+
+}
+

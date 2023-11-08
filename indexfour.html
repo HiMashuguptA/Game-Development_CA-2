@@ -8,34 +8,29 @@
 </head>
 <body>
     <div class="conatiner">
+        <!-- Gameover image -->
         <div class="gameover">
             <img src="gameover2.png" alt="">
         </div>
+        <!-- Won image -->
         <div id="won">
             <img src="won the match.png" alt="">
         </div>
+        <!-- Lost Image -->
         <div id="Lost">
             <img src="lost game.png" alt="">
         </div>
+        <!-- score div with score image and result -->
         <div class="score">
             <img src="YOUR SCORE _.png" alt=""> <p id="result">0</p>
         </div>
-        <div class="btn">
-            <button type="text" id="btn1"><p id="btn-text">PLAY AGAIN</p></button>
-            <button type="text" id="btn2"><p id="btn-text">EXIT</p></button>
+        <!-- play again button and exit button -->
+        <div class="play-exit-btn">
+            <button type="text" id="play-btn"><p id="btn-text">PLAY AGAIN</p></button>
+            <button type="text" id="exit-btn"><p id="btn-text">EXIT</p></button>
         </div>
     </div>
     <script src="app3.js"></script>
-    <!-- <script src="app4.js"></script> -->
 </body>
 
 </html>
-
-<script>
-
-    var result = document.getElementById("result")
-    var score = JSON.parse(localStorage.getItem("totalmoves"))
-    result.innerHTML=score
-    
-    
-</script>
