@@ -77,24 +77,13 @@ body{
 }
 
 /* infomation (i) Image  */
-#info{
-    /* top: 3.2%;
-    position: absolute;
-    right: 7.5%;
-    padding: 0 4% 0 0; */
-}
 #i{
     background-color: white;
     width: 46px;
     height: 44px;
     border-radius: 30px;
     cursor: pointer;
-    /* background-color: white;
-    border-radius: 66px;
-    width: 46px;
-    height: 44px;
-    color: white;
-    cursor: pointer; */
+
 }
 
 /* instruction image styling */
@@ -120,9 +109,6 @@ body{
     width: 18px;
     height: 20px;
 }
-/* #info{
-    margin-right: 25px;
-} */
 .introContainer{
     flex-direction: row;
     justify-content:flex-end;

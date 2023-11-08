@@ -1,5 +1,5 @@
 // Backgroundd Audio
-let bgMusic3 = new Audio("carry.mp3")
+let bgMusic3 = new Audio("game over.mp3")
 bgMusic3.play()
 
 // Click Exit Button redirects to Home Page

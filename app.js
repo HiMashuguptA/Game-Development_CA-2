@@ -1,5 +1,5 @@
 // Background Audio
-let bgMusic1 = new Audio("rom.mp3")
+let bgMusic1 = new Audio("energy.mp3")
     bgMusic1.play()
     loop = true
 
