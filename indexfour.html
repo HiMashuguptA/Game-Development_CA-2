@@ -6,22 +6,20 @@
     <title>MAZE GAME</title>
     <link rel="stylesheet" href="style4.css">
 </head>
-
-
 <body>
+    <!-- inserting video in background -->
     <div class="video">
         <video autoplay muted loop id="myVideo">
             <source src="background.mp4" type="video/mp4">
         </video>
-
     </div>
-    
-    <!-- Optional: some overlay text to describe the video -->
     <div class="content">
+        <!-- Won And Lost Text Design -->
     <h1 id="won" data-text="You Have Won 🏆 The Game">You Have Won 🏆 The Game</h1>
     <h1 id="Lost" data-text="You Have Lost 😿 The Game">You Have Lost 😿 The Game</h1>
+    <!-- Score Container -->
     <h2 id="Score">Your Score: <span id="result"></span></h2>
-    <!-- Use a button to pause/play the video with JavaScript -->
+    <!-- Play Button and exit button -->
     <button id="play-btn">PLAY AGAIN</button>
     <button id="exit-btn">EXIT</button>
     </div>
